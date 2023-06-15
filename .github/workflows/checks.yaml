@@ -1,4 +1,4 @@
-name: 'Check format, lint and run tests'
+name: 'Check format, lint, typecheck and run tests'
 
 on:
   push:
@@ -21,4 +21,5 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm format:check
       - run: pnpm lint
+      - run: pnpm typecheck
       - run: pnpm test
