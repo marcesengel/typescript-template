@@ -11,11 +11,12 @@
   "scripts": {
     "build": "rm -rf dist; rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "test": "jest",
+    "test:ci": "jest --ci",
     "typecheck": "tsc",
     "lint": "eslint .",
     "format:check": "prettier . --check",
     "format:write": "prettier . --write",
-    "prepublishOnly": "npm run format:check && npm run lint && npm run typecheck && npm run test",
+    "prepublishOnly": "npm run format:check && npm run lint && npm run typecheck && npm run test:ci",
     "prepare": "npm run build"
   },
   "keywords": [],
