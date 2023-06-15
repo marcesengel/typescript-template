@@ -1,4 +1,4 @@
-name: "Check format, lint and run tests"
+name: 'Check format, lint and run tests'
 
 on:
   push:
@@ -23,4 +23,3 @@ jobs:
       - run: pnpm format:check
       - run: pnpm lint
       - run: pnpm test
-
